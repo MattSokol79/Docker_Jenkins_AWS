@@ -30,6 +30,3 @@ EXPOSE 3000
 
 # Run seeds to see the posts appear, Start the app
 CMD ["node",  "app.js"]
-
-
-

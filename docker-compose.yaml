@@ -19,9 +19,6 @@ services:
   app:
     container_name: prod-nodejs-app
 
-    # Build the container from the current directory
-    build: .
-
     # Build from the image stored on the repository
     image: matt791/docker-app-automated
     
@@ -37,6 +34,6 @@ services:
     links:
       - mongo
     ports:
-      - "80:3000"
+      - "800:3000"
     
     
