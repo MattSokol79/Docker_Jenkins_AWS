@@ -22,6 +22,10 @@ services:
     # Build the container from the current directory
     build: .
     
+    # Build after mongo is created
+    depends_on: 
+      - mongo
+    
     # Specify DB_HOST for app to run posts/ 
     environment:
       - DB_HOST=mongodb://mongo:27017/posts 

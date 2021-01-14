@@ -20,5 +20,16 @@ sudo apt install openjdk-8-jdk
 wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add
 ```
 
-# Test 1
-# Test 2
+
+# S3 Bucket - Simple Storage Service
+- Essentially a blank hard drive
+- Used as disaster recovery plans
+- Unlimited storage
+- Can create a bucket with only `Read` permissions
+
+Creating a bucket
+- Bucket name -> eng74mattbucket
+- Create
+
+Permissions ->
+- 
