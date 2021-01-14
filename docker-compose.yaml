@@ -1,0 +1,35 @@
+version: "3"
+services:
+  mongo:
+    container_name: mongo_db
+
+    # Pulling the mongodb image from the web
+    image: mongo
+
+    # Restart the container whenever file is ran
+    restart: always
+
+    # Port 27017 as thats the port to access db
+    ports:
+      - "27017:27017"
+    volumes: 
+      - ./mongod.conf:/etc/mongod.conf
+ 
+
+  app:
+    container_name: prod-nodejs-app
+
+    # Build the container from the current directory
+    build: .
+    
+    # Specify DB_HOST for app to run posts/ 
+    environment:
+      - DB_HOST=mongodb://mongo:27017/posts 
+
+    # Link the db to app    
+    links:
+      - mongo
+    ports:
+      - "80:3000"
+    
+    
