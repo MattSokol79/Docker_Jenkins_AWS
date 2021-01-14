@@ -24,4 +24,8 @@
             app.push("latest")
         }
     }
+    
+    stage('Remove local images') {
+        sh"docker system prune -f"
+   }
 }

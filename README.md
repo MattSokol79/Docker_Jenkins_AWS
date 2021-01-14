@@ -20,6 +20,7 @@ sudo apt install openjdk-8-jdk
 wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add
 ```
 
+set up docker on every instance
 
 # S3 Bucket - Simple Storage Service
 - Essentially a blank hard drive
@@ -32,4 +33,6 @@ Creating a bucket
 - Create
 
 Permissions ->
-- 
+
+
+gmail webhook -> ahskhan@spartaglobal.com
