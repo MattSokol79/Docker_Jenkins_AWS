@@ -1,5 +1,5 @@
 # Select the latest node image to work from
-FROM node:latest
+FROM node:alpine
 
 # Who edited this docker file
 LABEL MAINTAINER=msokol@spartaglobal.com
