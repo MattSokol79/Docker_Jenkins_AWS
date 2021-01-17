@@ -34,6 +34,8 @@ sudo apt-get install jenkins
 
 sudo systemctl status jenkins
 ```
+- **Ensure to also install docker-compose and npm**
+
 - Once jenkins has been successfully installed on your instance, you can navigate to the `Public IP` of your instance on port 8080 to see jenkins working. 
   - Follow the instructions to activate your version of jenkins and install suggested plugins + Docker plugins
 
@@ -71,3 +73,5 @@ docker --version
 
 # Setting up the Production EC2 Instance
 - This instance should only have Docker installed, follow the instructions for the installation as described [earlier](#setup-docker-on-the-jenkins-master-instance)
+- Copy over your `docker-compose.yaml` and `mongod.conf` files into the instance as these should not change
+  - Alternatively, you can do this step within the CD-2 Jenkins shell
