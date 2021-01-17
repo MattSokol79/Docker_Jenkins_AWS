@@ -1,24 +1,19 @@
 # Instructions of how to setup a CICD
-## Pre-requisites
-1. 3 EC2 instances
-   - Jenkins Master Instance -> Jenkins Server
-   - Jenkins Worker Instance
-   - Production Instance -> Docker
+- Once your Jenkins has been configured on your Jenkins Master EC2 instance, you can begin on the CI CD pipeline.
 
-## Creating Jenkins Master EC2 Instance
-- Setup jenkins on the Jenkins Master instance 
-  - SSH in
-  - Install jenkins :
-```
-# Update and install Java
-sudo apt update -y
-sudo apt install openjdk-8-jdk
-```
-  - Add jenkins repo
-```
-# Add the Jenkins repo
-wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add
-```
+# CI 
+- For the CI, our aim is for our Jenkins to detect a push to the `dev` branch in the repository, test that the code is running as desired, and push to `main` branch upon success. 
+- Ensure you have connected your Jenkins to your GitHub repository with a Webhook:
+
+![](img/webhook.PNG)
+
+- [x] Discard old build
+  - [x] Days to keep builds : 1 
+  - [x] Max# of build : 3 
+
+
+
+
 
 set up docker on every instance
 
